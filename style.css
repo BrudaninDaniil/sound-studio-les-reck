@@ -6,6 +6,7 @@
 
 body {
     background-color: rgb(38, 38, 41);
+    max-height: 2000px;
 }
 
 a {
@@ -17,7 +18,9 @@ a {
 }
 
 .color_black {
-    color:black;
+    max-width: 1200px;
+    margin: auto;
+    color:rgb(109, 109, 109);
     font-size: 30px;
     font-weight: 700;
 }
@@ -37,7 +40,24 @@ h2 {
     font-family: 'Poiret One', cursive;
     text-align: center;
     text-shadow: 0px 0px 20px rgb(151, 151, 151);
+    padding: 10px;
 
+}
+
+/* .box_text {
+    animation: textRun 10s linear infinite;
+} */
+
+h4 {
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Poiret One', cursive;
+    padding: 10px;
+    animation: textRun 180s linear infinite;
+    z-index: 2;
+    
 }
 
 .grid_nav1 {
@@ -49,8 +69,8 @@ h2 {
 
 .all_grid {
     display: grid;
-    grid-template-rows: 80px 1fr 1fr 80px;
-    grid-template-columns: 500px 1fr;
+    grid-template-rows: 80px 1fr 200px;
+    grid-template-columns: 200px 1fr;
     grid-template-areas: 
     "header header"
     "aside main"
@@ -60,7 +80,9 @@ h2 {
 header {
     grid-area: header;
     position: fixed;
-    background-color: rgb(38, 38, 41); 
+    background-color: rgb(38, 38, 41);
+    overflow: hidden; 
+    z-index: 1;
 
 }
 
@@ -68,13 +90,17 @@ header {
 main {
     grid-area: main;
     background-color: rgb(221, 221, 221);
-    border-radius: 50px;
+    border-radius: 30px;
+    transition: ease 1 all;
+    border-left: 1px solid rgba(177, 42, 71, 0.637);
+    box-shadow: inset 110px 0px 100px -90px hsla(0, 100%, 62%, 0.699) ;
+    
 }
 
 .main_grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1000px 1000px 1000px 1000px ;
+    grid-template-rows: 1000px 1000px 1000px ;
     /* overflow: hidden; */
 }
 
@@ -82,24 +108,55 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
+
+.grid_sec2 {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.size_img {
+    margin: 95px 10px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 0px 30px 2px rgb(143, 143, 143);
+    filter: blur(0px);
+    transition: ease 0.3s all;
+    position: relative;
+    
+}
+
+.size_img:hover {
+    filter: blur(0px);
+    transform: scale(1.2);
+}
+
 
 aside {
     grid-area: aside;
-    background-color: rgb(190, 190, 190);
+    background-color: rgba(134, 134, 134, 0);
     border-radius: 50px;
-}
-
-.grid_aside {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    padding: 50% 0px;
+    overflow: hidden;
+    
 }
 
 footer {
-    width: 100vw;
     grid-area: footer;
-    border-radius: 50px;
 }
 
+
+
+
+
+@keyframes textRun {
+    from {
+        transform: translate(0%, 2%)
+    }
+    to {
+        transform:translate(0%, -100%)
+    }
+}
