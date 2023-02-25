@@ -55,7 +55,7 @@ h4 {
     color: white;
     font-family: 'Poiret One', cursive;
     padding: 10px;
-    animation: textRun 180s linear infinite;
+    animation: textRun 120s linear infinite;
     z-index: 2;
     
 }
@@ -93,7 +93,7 @@ main {
     border-radius: 30px;
     transition: ease 1 all;
     border-left: 1px solid rgba(177, 42, 71, 0.637);
-    box-shadow: inset 110px 0px 100px -90px hsla(0, 100%, 62%, 0.699) ;
+    box-shadow: inset 110px 0px 0px -90px hsla(0, 100%, 62%, 0.699) ;
     
 }
 
